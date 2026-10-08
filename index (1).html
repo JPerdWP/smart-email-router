@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Paul Perdicaro | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1320;
+    --surface: #161d2e;
+    --ink: #e8ecf5;
+    --muted: #9aa6bd;
+    --accent: #38bdf8;
+    --accent2: #fbbf24;
+    --line: #26304a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .logo { font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+  nav { display: flex; gap: 22px; }
+  nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
+  nav a:hover { color: var(--accent); }
+
+  main { max-width: 960px; margin: 0 auto; padding: 0 24px 64px; }
+  .hero { padding: 72px 0 56px; }
+  .hero h1 {
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+  .hero h1 { border-left: 6px solid var(--accent2); padding-left: 20px; }
+  .hero p { margin-top: 20px; font-size: 1.2rem; color: var(--muted); max-width: 52ch; }
+
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.7rem; margin-bottom: 20px; letter-spacing: -0.01em; }
+  #about p { max-width: 62ch; color: var(--muted); font-size: 1.05rem; }
+  #about p + p { margin-top: 14px; }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+  .skills li {
+    border-color: var(--line);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover, .card:focus-within {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 32px rgba(56, 189, 248, 0.18);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
+    .card:hover, .card:focus-within { transform: none; }
+  }
+  .thumb { height: 140px; background: linear-gradient(135deg, #1e4f8a, #38bdf8); }
+  .card:nth-child(2) .thumb { background: linear-gradient(135deg, #0f6b5c, #34d399); }
+  .card:nth-child(3) .thumb { background: linear-gradient(135deg, #a8610f, #fbbf24); }
+  .card-body { padding: 18px 20px 22px; }
+  .card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 0.95rem; }
+  .badge { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--accent2); border: 1px solid var(--accent2); border-radius: 999px; padding: 1px 10px; margin-bottom: 8px; }
+  .card a { display: inline-block; margin-top: 12px; color: var(--accent); font-weight: 600; }
+
+  #contact p { color: var(--muted); }
+  #contact a { color: var(--accent); font-weight: 600; }
+
+  footer { text-align: center; color: var(--muted); padding: 24px; font-size: 0.9rem; }
+
+  @media (max-width: 520px) {
+    nav { gap: 16px; }
+    .hero { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#top">John Paul Perdicaro</a>
+  <nav aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <h1>John Paul Perdicaro</h1>
+    <p>Information Technology student with a concentration in Cyber Security at William Paterson University of New Jersey.</p>
+  </div>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>I'm an Information Technology student at William Paterson University of New Jersey, with a concentration in Cyber Security. I'm interested in how systems are built and how they fail, and I enjoy finding ways to make them more secure.</p>
+    <p>I'm looking for an internship where I can apply what I'm learning and keep growing in the field.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>IT Support &amp; Troubleshooting</li>
+      <li>Windows</li>
+      <li>Windows Servers</li>
+      <li>Networking</li>
+      <li>Hardware &amp; Software Support</li>
+      <li>Cyber Security Fundamentals</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Smart Email Router</h3>
+          <p>A Python and OpenAI prototype that routes university inquiries to IT, Billing, Admissions, or Manual Review. I compared a baseline prompt against a few-shot prompt on 13 test emails and added safeguards that flag sensitive identifiers like SSNs for human review.</p>
+          <a href="https://github.com/JPerdWP/smart-email-router" target="_blank" rel="noopener">View project</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3>Policy RAG Assistant</h3>
+          <p>A command-line assistant that answers questions about a campus security policy. It retrieves relevant sections with TF-IDF search, cites section IDs in every answer, and declines to answer when the policy doesn't cover the question.</p>
+          <a href="#">View project</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb" aria-hidden="true"></div>
+        <div class="card-body">
+          <span class="badge">In progress</span>
+          <h3>IT Asset &amp; Security Tracking System</h3>
+          <p>My capstone project: a Flask and SQLite web app where small-business IT staff track devices, log security issues, and follow each one from Open to Resolved. It includes a severity dashboard and separate administrator and viewer accounts.</p>
+          <a href="#">View project</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:perdicaroj@student.wpunj.edu">perdicaroj@student.wpunj.edu</a>.</p>
+  </section>
+</main>
+
+<footer>&copy; 2026 John Paul Perdicaro</footer>
+
+</body>
+</html>
